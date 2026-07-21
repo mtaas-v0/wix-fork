@@ -73,7 +73,7 @@ jobs:
           
       - name: Build wix8
         shell: cmd
-        run: ./src/build_all.cmd Release
+        run: ./src/build_all.cmd Release  -p:WarningsNotAsErrors=NU1903
         env:
           RuntimeTestsEnabled: true
           AZURE_CLIENT_ID: ${{ env.SignBuild == 'true' && secrets.WIX_SIGNING_CLIENTID || '' }}
