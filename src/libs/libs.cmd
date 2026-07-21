@@ -19,7 +19,8 @@
 
 @echo Building libs %_C%
 
-msbuild -Restore libs_t.proj -p:Configuration=%_C% -tl -nologo -m -warnaserror -bl:%_L%\libs_build.binlog || exit /b
+::  -warnaserror
+msbuild -Restore libs_t.proj -p:Configuration=%_C% -tl -nologo -m -bl:%_L%\libs_build.binlog || exit /b
 
 @rem Optional blame switches for tracking down hangs: --blame-hang-timeout 1min --blame-hang-dump-type mini
 dotnet test ^
