@@ -62,6 +62,10 @@ jobs:
           allow-no-subscriptions: true
           client-id: ${{ secrets.WIX_SIGNING_CLIENTID }}
           tenant-id: ${{ secrets.WIX_SIGNING_TENANTID }}
+          
+      - name: Accept wix8-osmf-eula.txt
+        shell: powershell
+        run: New-Item -Path "$env:USERPROFILE\.wix\wix8-osmf-eula.txt" -ItemType File
 
       - name: Build wix8
         if: false
