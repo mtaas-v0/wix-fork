@@ -65,7 +65,10 @@ jobs:
 
       - name: Build wix8
         shell: cmd
-        run: dotnet publish src/wix/wix/wix.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false
+        run: |
+          dotnet build src/wix/wix/wix.csproj -c Release -r win-x64
+          dotnet test src/wix/wix/wix.csproj -c Release -r win-x64
+          dotnet publish src/wix/wix/wix.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false
 
 #        run: ./src/build_all.cmd Release
         env:
