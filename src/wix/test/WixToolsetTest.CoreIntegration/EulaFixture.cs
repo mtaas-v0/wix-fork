@@ -59,7 +59,15 @@ namespace WixToolsetTest.CoreIntegration
         {
             if (Directory.Exists(EulaFileFolder))
             {
-                File.Delete(EulaFilePath);
+                // Enumerate and print file paths
+                foreach (string file in Directory.EnumerateFiles(EulaFileFolder))
+                {
+                    Console.WriteLine($"[FILE] {file}");
+                    //File.Delete(EulaFilePath);
+                    File.Delete(file);
+                }
+                                
+                
                 Directory.Delete(EulaFileFolder);
             }
         }
