@@ -5,7 +5,8 @@
     <BindFiles>true</BindFiles>
 
     <!-- Add this line to accept the EULA -->
-    <AcceptEula>true</AcceptEula>
+    <!-- <AcceptEula>true</AcceptEula> -->
+    <AcceptEula>wix8</AcceptEula>
   </PropertyGroup>
 
   <ItemGroup>
