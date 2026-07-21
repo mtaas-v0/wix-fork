@@ -30,6 +30,9 @@
     <NuGetAudit>true</NuGetAudit>
     <NuGetAuditMode>all</NuGetAuditMode>
     <NuGetAuditLevel>low</NuGetAuditLevel>
+
+    
+    <AcceptEula>wix8</AcceptEula>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -51,6 +54,9 @@
     <PackageIconSource Condition=" '$(WixOfficialBuild)'!='true' ">$(MSBuildThisFileDirectory)internal\images\icon.png</PackageIconSource>
     <PackageIconSource Condition=" '$(WixOfficialBuild)'=='true' ">$(MSBuildThisFileDirectory)internal\images\official\icon.png</PackageIconSource>
     <PackageTags>WiX MSI install setup</PackageTags>
+
+    
+    <AcceptEula>wix8</AcceptEula>
   </PropertyGroup>
 
   <Import Project="Directory$(MSBuildProjectExtension).props" Condition=" Exists('Directory$(MSBuildProjectExtension).props') " />
