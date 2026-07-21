@@ -65,7 +65,9 @@ jobs:
 
       - name: Build wix8
         shell: cmd
-        run: ./src/build_all.cmd Release
+        run: dotnet publish src/wix/wix/wix.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false
+
+#        run: ./src/build_all.cmd Release
         env:
           RuntimeTestsEnabled: true
           AZURE_CLIENT_ID: ${{ env.SignBuild == 'true' && secrets.WIX_SIGNING_CLIENTID || '' }}
