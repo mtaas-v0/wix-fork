@@ -16,57 +16,68 @@ call build_init.cmd
 
 :: DTF
 
+echo "::group::dtf.cmd"
 call dtf\dtf.cmd %_C% || exit /b
-
+echo "::endgroup::"
 
 :: internal
-
+echo "::group::internal.cmd"
 call internal\internal.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: libs
-
+echo "::group::libs.cmd"
 call libs\libs.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: api
-
+echo "::group::api.cmd"
 call api\api.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: burn
-
+echo "::group::burn.cmd"
 call burn\burn.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: wix
-
+echo "::group::wix.cmd"
 call wix\wix.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: tools
-
+echo "::group::tools.cmd"
 call tools\tools.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: ext
-
+echo "::group::ext.cmd"
 call ext\ext.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: setup
-
+echo "::group::setup.cmd"
 call setup\setup.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: integration tests
-
+echo "::group::test.cmd"
 call test\test.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 :: finalize build
-
+echo "::group::finalize.cmd"
 call internal\finalize.cmd %_C% || exit /b
+echo "::endgroup::"
 
 
 goto LExit
