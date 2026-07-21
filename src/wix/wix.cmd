@@ -36,7 +36,7 @@ msbuild publish_t.proj -p:Configuration=%_C% -tl -nologo -bl:%_L%\wix_publish.bi
 msbuild -t:Publish -p:Configuration=%_C% -tl -nologo WixToolset.Sdk\WixToolset.Sdk.csproj -bl:%_L%\wix_sdk_publish.binlog || exit /b
 
 :: --self-contained true
-msbuild -t:Publish -p:Configuration=%_C% --self-contained true -tl -nologo WixToolset.Sdk\WixToolset.Sdk.csproj -bl:%_L%\wix_sdk_publish.binlog || exit /b
+msbuild -t:Publish -p:Configuration=%_C% -p:SelfContained=true -tl -nologo WixToolset.Sdk\WixToolset.Sdk.csproj -bl:%_L%\wix_sdk_publish.binlog || exit /b
 
 
 
