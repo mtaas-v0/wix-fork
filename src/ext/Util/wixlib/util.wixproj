@@ -3,6 +3,9 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <BindFiles>true</BindFiles>
+
+    <!-- Add this line to accept the EULA -->
+    <AcceptEula>true</AcceptEula>
   </PropertyGroup>
 
   <ItemGroup>
