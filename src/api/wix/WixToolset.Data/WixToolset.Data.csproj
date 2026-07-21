@@ -13,6 +13,9 @@
     <CreateDocumentationFile>true</CreateDocumentationFile>
     <!-- TODO: This shouldn't be ignored because this is public-facing -->
     <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+    <!-- Allows vulnerability warnings to remain warnings rather than build-breaking errors -->
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
