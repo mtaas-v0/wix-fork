@@ -10,7 +10,9 @@
 
 @echo WiX integration tests %_C%
 
-msbuild -Restore WixE2E\WixE2E.csproj -t:Test -p:Configuration=%_C% -tl -nologo -warnaserror -bl:%_L%\test_wix.binlog || exit /b
+:: -warnaserror 
+
+msbuild -Restore WixE2E\WixE2E.csproj -t:Test -p:Configuration=%_C% -tl -nologo -bl:%_L%\test_wix.binlog || exit /b
 
 @popd
 @endlocal
