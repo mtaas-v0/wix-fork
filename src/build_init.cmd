@@ -13,7 +13,7 @@ echo ":: LIST TARGETS"
 msbuild internal\SetBuildNumber\SomeVerInit.verproj -targets
 
 echo ":: BEFORE msbuild SomeVerInit.verproj"
-msbuild internal\SetBuildNumber\SomeVerInit.verproj -nologo  -v:detailed -target:SomeVerApplyVersionTemplates -bl:%_L%\somever_init.binlog
+msbuild internal\SetBuildNumber\SomeVerInit.verproj -target:SomeVerApplyVersionTemplates -bl:%_L%\somever_init.binlog
 echo ":: END msbuild SomeVerInit.verproj"
 :: msbuild -Restore internal\SetBuildNumber\SomeVerInit.verproj -nologo
 
