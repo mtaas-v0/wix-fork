@@ -108,6 +108,9 @@ namespace WixToolset.Core.CommandLine
 
         internal static bool IsAccepted(HashSet<string> acceptedEulaIds)
         {
+            
+            string result = string.Join(", ", acceptedEulaIds);
+            Console.WriteLine($"[DEBUG] IsAccepted: {result}");
             if (AcceptedThisVersionsEulaId(acceptedEulaIds))
             {
                 return true;
@@ -119,6 +122,9 @@ namespace WixToolset.Core.CommandLine
 
         private static bool Accept(HashSet<string> acceptedEulaIds)
         {
+        
+            string result = string.Join(", ", acceptedEulaIds);
+            Console.WriteLine($"[DEBUG] Accept: {result}");
             if (!AcceptedThisVersionsEulaId(acceptedEulaIds))
             {
                 return false;
@@ -140,6 +146,8 @@ namespace WixToolset.Core.CommandLine
 
         private static bool AcceptedThisVersionsEulaId(HashSet<string> acceptedEulaIds)
         {
+            string result = string.Join(", ", acceptedEulaIds);
+            Console.WriteLine($"[DEBUG] AcceptedThisVersionsEulaId: {result} | {EulaCommand.RequiredEulaId}");
             return acceptedEulaIds.Contains(EulaCommand.RequiredEulaId) == true;
         }
 
