@@ -33,6 +33,13 @@
 
     
     <AcceptEula>wix8</AcceptEula>
+    <!-- Use 'v' prefix for git tags (e.g., v1.2.3) -->
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <!-- Set a minimum version floor for this branch -->
+    <MinVerMinimumMajorMinor>8.0</MinVerMinimumMajorMinor>
+    <!-- Increment minor part instead of patch -->
+    <MinVerAutoIncrement>minor</MinVerAutoIncrement>
+
   </PropertyGroup>
 
   <PropertyGroup>
