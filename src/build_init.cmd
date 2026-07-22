@@ -7,7 +7,7 @@ md ..\build\artifacts
 md ..\build\logs\crashdumps
 md ..\build\logs\TestResults
 
-msbuild -Restore internal\SetBuildNumber\SomeVerInit.verproj -nologo
+msbuild -Restore internal\SetBuildNumber\SomeVerInit.verproj -nologo -p:SomeVerMinimumMajorMinor=8.0
 
 echo ":: LIST TARGETS"
 msbuild internal\SetBuildNumber\SomeVerInit.verproj -targets
