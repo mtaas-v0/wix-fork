@@ -1,6 +1,8 @@
 @setlocal
 @pushd %~dp0
 
+@set _L=%~dp0..\build\logs
+
 md ..\build\artifacts
 md ..\build\logs\crashdumps
 md ..\build\logs\TestResults
