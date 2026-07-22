@@ -7,5 +7,13 @@ md ..\build\logs\TestResults
 
 msbuild -Restore internal\SetBuildNumber\SomeVerInit.verproj -nologo
 
+:: msbuild -Restore internal\SetBuildNumber\SomeVerInit.verproj -nologo
+
+echo "D:\a\wix-fork\wix-fork\build\SomeVerInfo.cs"
+type  D:\a\wix-fork\wix-fork\build\SomeVerInfo.cs
+exit 1
+
+
+
 @popd
 @endlocal
