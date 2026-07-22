@@ -25,6 +25,8 @@ jobs:
       RepoOrg: ${{ github.repository_owner }}
       SignBuild: ${{ github.repository_owner == 'wixtoolset' && startsWith(github.ref, 'refs/tags/v') }}
       WixOfficialBuild: ${{ github.repository_owner == 'wixtoolset' && startsWith(github.ref, 'refs/tags/v') }}
+      VersionMajor: 8
+      
     permissions:
       packages: write
       id-token: write
