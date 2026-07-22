@@ -7,6 +7,9 @@ md ..\build\logs\TestResults
 
 msbuild -Restore internal\SetBuildNumber\SomeVerInit.verproj -nologo
 
+echo ":: LIST TARGETS"
+msbuild internal\SetBuildNumber\SomeVerInit.verproj -targets
+
 echo ":: BEFORE msbuild SomeVerInit.verproj"
 msbuild internal\SetBuildNumber\SomeVerInit.verproj -nologo -target:SomeVer -bl:%_L%\somever_init.binlog
 echo ":: END msbuild SomeVerInit.verproj"
