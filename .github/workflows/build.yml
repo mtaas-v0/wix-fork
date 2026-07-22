@@ -65,6 +65,7 @@ jobs:
           
       - name: Accept wix8-osmf-eula.txt
         shell: powershell
+        if: false
         run: |
           New-Item -Path "$env:USERPROFILE\.wix" -ItemType Directory -Force
           New-Item -Path "$env:USERPROFILE\.wix\wix8-osmf-eula.txt" -ItemType File
