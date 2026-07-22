@@ -27,12 +27,6 @@ nuget restore || exit /b
 
 msbuild internal_t.proj -p:Configuration=%_C% -tl -nologo -warnaserror -bl:%_L%\internal_build.binlog || exit /b
 
-
-echo "D:\a\wix-fork\wix-fork\build\SomeVerInfo.cs"
-type  D:\a\wix-fork\wix-fork\build\SomeVerInfo.cs
-exit 1
-
-
 @goto :end
 
 :clean
