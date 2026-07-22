@@ -24,7 +24,6 @@
     <!-- Allows vulnerability warnings to remain warnings rather than build-breaking errors -->
     <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
 
-    <SomeVerMajor>8</SomeVerMajor>
   </PropertyGroup>
 
   <ItemGroup>
